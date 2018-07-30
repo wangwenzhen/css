@@ -1,0 +1,39 @@
+.ellipsis(@w:auto) {//文字超出省略
+    width: @w;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+}
+
+.ellipsisLn(@line) {//文字超行数省略
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: @line;
+}
+.text_wrap() {//英文自动换行
+    word-wrap:break-word;
+    word-break:break-all;
+}
+.hyphens() {//英文超出换行时横杠补充
+    word-wrap:break-word;
+    -webkit-hyphens:auto;
+    hyphens:auto;
+}
+.sel-none(){//禁止双击选中文字
+ -moz-user-select: none; 
+-webkit-user-select: none; 
+-ms-user-select: none; 
+-khtml-user-select: none; 
+user-select: none;   
+}
+
+.sel-true(){//允许双击选中文字
+-moz-user-select: text; 
+-webkit-user-select: text; 
+-ms-user-select: text; 
+-khtml-user-select: text; 
+user-select: text; 
+}
